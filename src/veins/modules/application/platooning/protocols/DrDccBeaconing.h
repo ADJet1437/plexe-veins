@@ -36,21 +36,6 @@
 
 class DrDccBeaconing : public BaseProtocol {
     public:
-//        class NeighborEntry {
-//            public:
-//                int id;
-//                double dist;
-//                simtime_t createdAt;
-//                simtime_t lastUpdate;
-//        };
-//        class State{
-//            typedef AS_PARAMETER<double>       NDL_TYPE_TXPOWER_DBM;
-//            AS_PARAMETER<double> asTxPower_dBm;
-//
-//            State(NDL_TYPE_TXPOWER_DBM asTxPower_dBm) :
-//                asTxPower_dBm(asTxPower_dBm){
-//            }
-//        }
 
         DrDccBeaconing();
         virtual void initialize(int stage);
@@ -58,8 +43,6 @@ class DrDccBeaconing : public BaseProtocol {
         virtual ~DrDccBeaconing();
 
     protected:
-//        typedef std::map<int, NeighborEntry> Neighbors;
-//        typedef std::set<int> TotalNeighbors;
 
         class State {
             public:
@@ -118,12 +101,9 @@ class DrDccBeaconing : public BaseProtocol {
         cMessage* doDccEvt;
         cMessage* doMeasureEvt;
 
-//        RingBuffer<double> channelLoadInTimeUp;
-//        RingBuffer<double> channelLoadInTimeDown;
         RingBuffer<double> channelLoad;
 
         void handleSelfMsg(cMessage* msg);
-//        virtual void startCommunications();
         void messageReceived(PlatooningBeacon *pkt, UnicastMessage *unicast);
         //override superclass methods to get channel busy info
         virtual void channelBusyStart();
@@ -139,7 +119,6 @@ class DrDccBeaconing : public BaseProtocol {
 
         void doMeasure();
         void doDcc();
-//        void setCurrentState(size_t state);
 
         simtime_t lastBeaconAt;
 

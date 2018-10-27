@@ -73,8 +73,6 @@ void DrDccBeaconing::initialize(int stage) {
         level4bitrate = par("level4bitrate").doubleValue();
         level5bitrate = par("level5bitrate").doubleValue();
 
-//        std::cout << level3bitrate <<std::endl;
-
         channelLoad.reset(NDL_time / DCC_measure_interval_Tm);
 
         beaconIntervalIdOut.setName("beaconIntervalId");

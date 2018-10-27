@@ -234,7 +234,6 @@ void DccBeaconing_new::setCurrentState(size_t state) {
         currentPacketInterval = stateInterval;
     }
 
-    //if (communicationsStarted && sendBeacon->isScheduled())
     if (sendBeacon->isScheduled()){
         // re-schedule next beacon
         simtime_t newScheduleTime = std::max(simTime(), new_lastBeaconAt + currentPacketInterval * uniform(1.00, 1.01));

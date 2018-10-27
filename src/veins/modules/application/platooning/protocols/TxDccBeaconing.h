@@ -36,21 +36,6 @@
 
 class TxDccBeaconing : public BaseProtocol {
     public:
-//        class NeighborEntry {
-//            public:
-//                int id;
-//                double dist;
-//                simtime_t createdAt;
-//                simtime_t lastUpdate;
-//        };
-//        class State{
-//            typedef AS_PARAMETER<double>       NDL_TYPE_TXPOWER_DBM;
-//            AS_PARAMETER<double> asTxPower_dBm;
-//
-//            State(NDL_TYPE_TXPOWER_DBM asTxPower_dBm) :
-//                asTxPower_dBm(asTxPower_dBm){
-//            }
-//        }
 
         TxDccBeaconing();
         virtual void initialize(int stage);
@@ -58,8 +43,6 @@ class TxDccBeaconing : public BaseProtocol {
         virtual ~TxDccBeaconing();
 
     protected:
-//        typedef std::map<int, NeighborEntry> Neighbors;
-//        typedef std::set<int> TotalNeighbors;
 
         class State {
             public:
@@ -118,8 +101,6 @@ class TxDccBeaconing : public BaseProtocol {
         cMessage* doDccEvt;
         cMessage* doMeasureEvt;
 
-//        RingBuffer<double> channelLoadInTimeUp;
-//        RingBuffer<double> channelLoadInTimeDown;
         RingBuffer<double> channelLoad;
 
         void handleSelfMsg(cMessage* msg);
@@ -139,7 +120,6 @@ class TxDccBeaconing : public BaseProtocol {
 
         void doMeasure();
         void doDcc();
-//        void setCurrentState(size_t state);
 
         simtime_t lastBeaconAt;
 

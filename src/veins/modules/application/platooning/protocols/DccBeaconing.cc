@@ -87,10 +87,6 @@ void DccBeaconing::initialize(int stage) {
 
         beaconIntervalIdOut.setName("beaconIntervalId");
         beaconIntervalOut.setName("beaconInterval");
-        //busyRatioOut.setName("busyRatio");
-        //currentPacketIntervalOut.setName("currentPacketInterval");
-        //currentStateOut.setName("currentState");
-        //IRTOut.setName("InterReceptionTime");
 
         idleChannel = true;
         dccStartBusy = simTime();

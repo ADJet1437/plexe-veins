@@ -42,14 +42,6 @@ class DccBeaconing_new : public BaseProtocol {
                 simtime_t createdAt;
                 simtime_t lastUpdate;
         };
-//        class State{
-//            typedef AS_PARAMETER<double>       NDL_TYPE_TXPOWER_DBM;
-//            AS_PARAMETER<double> asTxPower_dBm;
-//
-//            State(NDL_TYPE_TXPOWER_DBM asTxPower_dBm) :
-//                asTxPower_dBm(asTxPower_dBm){
-//            }
-//        }
 
         DccBeaconing_new();
         virtual void initialize(int stage);
@@ -129,8 +121,6 @@ class DccBeaconing_new : public BaseProtocol {
         virtual void channelBusyStart();
         virtual void channelIdleStart();
 
-//        virtual void expireNeighbors(bool expireAll = false);
-
     private:
 
         SimTime dccIdleTime, dccBusyTime, dccStartIdle, dccStartBusy;
@@ -152,9 +142,6 @@ class DccBeaconing_new : public BaseProtocol {
 
         cOutVector beaconIntervalIdOut;
         cOutVector beaconIntervalOut;
-//        cOutVector busyRatioOut;
-//        cOutVector currentPacketIntervalOut;
-//        cOutVector currentStateOut,IRTOut;
 
 };
 
